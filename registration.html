@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        input[type=text], input[type=password], input[type=email], input[type=file] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        legend {
+            margin-top: 15px;
+        }
+
+        input[type=radio] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fill Your Details Here</h2>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <!-- Name -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+            <!-- Surname -->
+            <label for="surname">Surname:</label><br>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required><br>
+
+            <!-- Gender Selection -->
+            <legend>Choose your gender:</legend>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="male">Male</label><br>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+            <!-- Image Upload -->
+            <label for="image">Select image to upload:</label><br>
+            <input type="file" name="anyfile" id="anyfile" required><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit" name="submit">Upload Image</button>
+        </form>
+    </div>
+</body>
+</html>
